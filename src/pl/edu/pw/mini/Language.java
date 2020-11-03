@@ -1,11 +1,15 @@
 package pl.edu.pw.mini;
 
-public enum Language {
-english,
-polish,
-german,
-french,
-spanish,
-italian
+import java.util.Arrays;
 
+public enum Language {
+	english,
+	polish,
+	german,
+	french,
+	spanish,
+	italian;
+	public static String[] names() {
+	    return Arrays.toString(Language.values()).replaceAll("^.|.$", "").split(", ");
+	}
 }
