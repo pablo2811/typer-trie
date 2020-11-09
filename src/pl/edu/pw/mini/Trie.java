@@ -93,7 +93,11 @@ public class Trie {
 	}
 	
 	public List<String> typo(String word,int n){
-		List<String> res1 = this.rh.permutations(word,n);
+		List<String> res1 = new ArrayList<>();
+		if(in_trie(word) != null) {
+			return res1;
+		}
+		res1 = this.rh.permutations(word,n);
 		int i = 0;
 		boolean flag = false;
 		String new_word="";

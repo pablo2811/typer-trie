@@ -1,6 +1,7 @@
 package pl.edu.pw.mini;
 
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -44,6 +45,9 @@ public class Dictionary {
 	}
 	
 	public List<String> completion(String req){
+		if(req.length() == 0) {
+			return null;
+		}
 		List <String> res = this.map.get(this.current).comp(req.toLowerCase(), this.N);
 		if(Character.isUpperCase(req.charAt(0))){
 			to_Upper_list(res);
@@ -51,6 +55,9 @@ public class Dictionary {
 		return res;
 	}
 	public List<String> typoCompletion(String req){
+		if(req.length() == 0) {
+			return null;
+		}
 		List<String> res =  this.map.get(this.current).typo(req.toLowerCase(), this.N);
 		if(Character.isUpperCase(req.charAt(0))){
 			to_Upper_list(res);

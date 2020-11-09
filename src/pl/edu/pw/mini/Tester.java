@@ -3,7 +3,6 @@ package pl.edu.pw.mini;
 import java.io.FileNotFoundException;
 import java.util.List;
 import java.util.Scanner;
-
 public class Tester {
 	Dictionary d;
 	Tester() throws FileNotFoundException{

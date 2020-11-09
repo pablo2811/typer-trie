@@ -3,9 +3,9 @@ package pl.edu.pw.mini;
 public class Pair {
 
 	String word;
-	Integer diff;
+	Integer position;
 	public Pair(String w,int d){
 		this.word = w;
-		this.diff = d;
+		this.position = d;
 	}
 }
